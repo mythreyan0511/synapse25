@@ -1,110 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SYNAPSE ’25 Sponsorship</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #f3f6fa, #e8eef5);
-      margin: 0;
-      scroll-behavior: smooth;
-    }
-    /* Navbar */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #0A2472;
-      color: white;
-      padding: 12px 0;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      z-index: 1000;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-    .navbar a:hover {
-      color: #a6e1fa;
-    }
-    /* Sections */
-    .section {
-      max-width: 850px;
-      margin: 100px auto 50px auto;
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 5px 16px rgba(0,0,0,0.08);
-      opacity: 0;
-      transform: translateY(15px);
-      animation: fadeIn 0.6s ease forwards;
-    }
-    @keyframes fadeIn {
-      to { opacity: 1; transform: translateY(0); }
-    }
-    h1, h2 { text-align: center; color: #0A2472; }
-    h3 { color: #0E6BA8; margin-top: 20px; }
-    h4 { color: #444; margin-top: 15px; }
-    ul { margin-left: 25px; }
-    li { margin-bottom: 6px; }
-    .highlight { font-weight: bold; color: #0A2472; }
-    .cta { text-align: center; margin-top: 20px; }
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      margin: 8px;
-      font-size: 16px;
-      border-radius: 6px;
-      text-decoration: none;
-      color: white;
-    }
-    .email-btn { background-color: #0A2472; }
-    .whatsapp-btn { background-color: #25D366; }
-    .icon { font-size: 20px; margin-right: 6px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SYNAPSE ’25 Sponsorship</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= BODY & FONT ================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #001524, #15616d, #ffecd1, #ff7d00);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+@keyframes gradientBG {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background: rgba(0, 18, 36, 0.85);
+  padding: 14px 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.navbar a:hover, .navbar a.active {
+  color: #ffecd1;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  max-width: 900px;
+  margin: 120px auto 50px auto;
+  background: rgba(0, 18, 36, 0.85);
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+  scroll-margin-top: 90px;
+}
+@keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+
+h1, h2 { text-align: center; color: #ffecd1; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+h3 { margin-top: 20px; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+h4 { margin-top: 15px; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+p { line-height: 1.6; font-size: 17px; }
+ul { margin-left: 25px; }
+li { margin-bottom: 8px; }
+
+/* ================= CARD STYLES ================= */
+.card {
+  border-radius: 12px;
+  padding: 18px;
+  margin: 15px 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* Tier colors */
+.platinum { background: linear-gradient(135deg,#ffb347,#ffcc33); color:#001524; }
+.gold     { background: linear-gradient(135deg,#fefcea,#f1da36); color:#001524; }
+.silver   { background: linear-gradient(135deg,#c0c0c0,#7f8c8d); color:#001524; }
+.minor1   { background: linear-gradient(135deg,#16a085,#1abc9c); color:#001524; }
+.minor2   { background: linear-gradient(135deg,#2ecc71,#27ae60); color:#001524; }
+.minor3   { background: linear-gradient(135deg,#95a5a6,#7f8c8d); color:#001524; }
+
+/* ================= BUTTONS ================= */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  margin: 8px;
+  font-size: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.email-btn { background: linear-gradient(135deg,#15616d,#ffecd1); color: #001524; }
+.whatsapp-btn { background: linear-gradient(135deg,#25D366,#16a34a); color: #fff; }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
+
+/* ================= ICONS ================= */
+.icon { font-size: 20px; margin-right: 8px; animation: bounce 1.5s infinite; }
+@keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .navbar { flex-direction: column; gap: 12px; padding: 12px 0; }
+  .navbar a { font-size: 14px; }
+  .section { margin: 100px 15px 50px 15px; padding: 25px; }
+  h1 { font-size: 26px; }
+  h2 { font-size: 22px; }
+}
+</style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <div class="navbar">
-    <a href="#title">🏠 Title</a>
-    <a href="#why">📈 Why Sponsor</a>
-    <a href="#tariff">💰 Tariff</a>
-    <a href="#contact">📞 Contact</a>
-  </div>
+<!-- Navbar -->
+<div class="navbar">
+  <a href="#title" class="active">🏠 Title</a>
+  <a href="#why">📈 Why Sponsor</a>
+  <a href="#tariff">💰 Tariff</a>
+  <a href="#contact">📞 Contact</a>
+</div>
 
-  <!-- Title Section -->
-  <div class="section" id="title">
-    <h1>💠 SYNAPSE ’25 Sponsorship Opportunities</h1>
-    <p style="text-align:center; font-size:17px;">
-      Government Vellore Medical College proudly presents <strong>SYNAPSE ’25</strong>, 
-      our flagship inter‑college <strong>cultural, sports, and Tamil Mandram fest</strong>, 
-      scheduled from <strong>October 8‑10, 2025</strong>.
-    </p>
-  </div>
+<!-- Title Section -->
+<div class="section" id="title">
+  <h1>💠 SYNAPSE ’25 Sponsorship Opportunities</h1>
+  <p style="text-align:center;">
+    Government Vellore Medical College proudly presents <strong>SYNAPSE ’25</strong>, our flagship inter‑college <strong>cultural and sports fest</strong>, scheduled from <strong>October 8‑10, 2025</strong>.
+  </p>
+</div>
 
-  <!-- Why Sponsor Section -->
-  <div class="section" id="why">
-    <h2>📈 Why Sponsor SYNAPSE ’25?</h2>
-    <p>With <strong>2,000+ medical students, healthcare professionals, and youth attendees</strong>, SYNAPSE ’25 offers unparalleled exposure to an influential and educated audience.</p>
+<!-- Why Sponsor Section -->
+<div class="section" id="why">
+  <h2>📈 Why Sponsor SYNAPSE ’25?</h2>
+  <p>With <strong>2,000+ medical students, healthcare professionals, and youth attendees</strong>, SYNAPSE ’25 offers unparalleled exposure to an influential and educated audience.</p>
 
-    <h3>💡 Branding Advantages</h3>
+  <h3>💡 Branding Advantages</h3>
+  <div class="card minor1">
     <ul>
       <li>Logo on banners, stage backdrops, certificates, T‑shirts, and invitations.</li>
       <li>Repeated ad plays and event mentions for <strong>high recall value</strong>.</li>
       <li>Exclusive stalls for <strong>direct customer engagement</strong>.</li>
       <li>Strong online presence via Instagram promotions and website branding.</li>
     </ul>
+  </div>
 
-    <h3>📊 Return on Investment (ROI)</h3>
+  <h3>📊 Return on Investment (ROI)</h3>
+  <div class="card minor2">
     <ul>
       <li><strong>High Footfall:</strong> Reach future doctors and decision-makers.</li>
       <li><strong>Long-Term Recall:</strong> Branding on certificates and merchandise.</li>
@@ -112,12 +162,14 @@
       <li><strong>Goodwill:</strong> Association with a reputed medical college fest.</li>
     </ul>
   </div>
+</div>
 
-  <!-- Tariff Section -->
-  <div class="section" id="tariff">
-    <h2>💰 Sponsorship Tariff</h2>
+<!-- Tariff Section -->
+<div class="section" id="tariff">
+  <h2>💰 Sponsorship Tariff</h2>
 
-    <h3>💎 <span class="icon">👑</span> Platinum Sponsor – <span class="highlight">₹1,00,000+ (Title Sponsor)</span></h3>
+  <div class="card platinum">
+    <h3>💎 <span class="icon">👑</span> Platinum Sponsor – ₹1,00,000+</h3>
     <ul>
       <li>Exclusive Title Sponsor status with <strong>maximum brand visibility</strong>.</li>
       <li>Clickable logo on website header section.</li>
@@ -128,10 +180,13 @@
       <li>Frequent Instagram promotions via reels, posts, and stories.</li>
       <li>2‑minute ads <strong>12 times/day</strong> and company intro <strong>5 times/day</strong>.</li>
     </ul>
+    <div style="text-align:center;"><a href="#contact" class="btn email-btn">Become Platinum Sponsor</a></div>
+  </div>
 
-    <h3>🟡 <span class="icon">🥇</span> Gold Sponsor – <span class="highlight">₹50,001 – ₹1,00,000</span></h3>
+  <div class="card gold">
+    <h3>🟡 <span class="icon">🥇</span> Gold Sponsor – ₹50,001 – ₹1,00,000</h3>
     <ul>
-      <li>Considered as Co‑Sponsor for the event.</li>
+      <li>Co-Sponsor status for the event.</li>
       <li>Logo on backdrops, invitations, and participant certificates.</li>
       <li>Branding through website initial sections.</li>
       <li>Shared branding on water bottle labels.</li>
@@ -140,8 +195,11 @@
       <li>Instagram promotions via reels, posts, and stories.</li>
       <li>2‑minute ads <strong>7 times/day</strong> and intro <strong>4 times/day</strong>.</li>
     </ul>
+    <div style="text-align:center;"><a href="#contact" class="btn email-btn">Become Gold Sponsor</a></div>
+  </div>
 
-    <h3>⚪ <span class="icon">🥈</span> Silver Sponsor – <span class="highlight">₹25,000 – ₹50,000</span></h3>
+  <div class="card silver">
+    <h3>⚪ <span class="icon">🥈</span> Silver Sponsor – ₹25,000 – ₹50,000</h3>
     <ul>
       <li>Logo on event backdrops.</li>
       <li>Full‑page magazine ad.</li>
@@ -151,10 +209,12 @@
       <li>Event stamp featuring sponsor name.</li>
       <li>Clickable logo on website.</li>
     </ul>
+    <div style="text-align:center;"><a href="#contact" class="btn email-btn">Become Silver Sponsor</a></div>
+  </div>
 
-    <h3>🔸 Minor Sponsorship</h3>
-
-    <h4>🔻 ₹10,001 & Above</h4>
+  <!-- Minor Tiers -->
+  <div class="card minor1">
+    <h4>🔻 Minor Sponsorship – ₹10,001 & Above</h4>
     <ul>
       <li>Full‑page color advertisement in magazine.</li>
       <li>Logo displayed on banners.</li>
@@ -163,37 +223,45 @@
       <li>Logo displayed on LED screen (once).</li>
       <li>Listed under "Other Sponsors" on website.</li>
     </ul>
+  </div>
 
-    <h4>🔻 ₹5,001 – ₹10,000</h4>
+  <div class="card minor2">
+    <h4>🔻 Minor Sponsorship – ₹5,001 – ₹10,000</h4>
     <ul>
       <li>Half‑page color advertisement in magazine.</li>
       <li>Logo displayed on banners.</li>
       <li>Promotion via Instagram page.</li>
       <li>Logo displayed on LED screen (once).</li>
+      <li>Listed under "Other Sponsors" on website.</li>
     </ul>
+  </div>
 
-    <h4>🔻 ₹2,500 – ₹5,000</h4>
+  <div class="card minor3">
+    <h4>🔻 Minor Sponsorship – ₹2,500 – ₹5,000</h4>
     <ul>
       <li>Half‑page black & white advertisement in magazine.</li>
       <li>Logo displayed on banners.</li>
-      <li>Promotion via Instagram page (common thank‑you post).</li>
+      <li>Promotion via Instagram page.</li>
+      <li>Listed under "Other Sponsors" on website.</li>
     </ul>
   </div>
 
-  <!-- Contact Section -->
-  <div class="section" id="contact">
-    <h2>📞 Get in Touch</h2>
-    <p style="text-align:center; font-size:17px;">
-      For sponsorship opportunities, please reach out to:<br><br>
-      <strong>Mythreyan</strong><br>
-      📧 <a href="mailto:mythreyan11993@gmail.com">mythreyan11993@gmail.com</a><br>
-      📱 <a href="https://wa.me/918754806142">+91 87548 06142</a>
-    </p>
-    <div class="cta">
-      <a href="mailto:mythreyan11993@gmail.com" class="btn email-btn">📧 Email Us</a>
-      <a href="https://wa.me/918754806142" class="btn whatsapp-btn">💬 WhatsApp Us</a>
-    </div>
+</div>
+
+<!-- Contact Section -->
+<div class="section" id="contact">
+  <h2>📞 Get in Touch</h2>
+  <p style="text-align:center;">
+    For sponsorship opportunities, please reach out to:<br><br>
+    <strong>Mythreyan</strong><br>
+    📧 <a href="mailto:mythreyan11993@gmail.com" style="color:#ffecd1;">mythreyan11993@gmail.com</a><br>
+    📱 <a href="https://wa.me/918754806142" style="color:#ffecd1;">+91 87548 06142</a>
+  </p>
+  <div class="cta" style="text-align:center;">
+    <a href="mailto:mythreyan11993@gmail.com" class="btn email-btn">📧 Email Us</a>
+    <a href="https://wa.me/918754806142" class="btn whatsapp-btn">💬 WhatsApp Us</a>
   </div>
+</div>
 
 </body>
 </html>
